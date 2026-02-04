@@ -1,0 +1,31 @@
+{
+  "name": "earth-intel-bot",
+  "version": "1.0.0",
+  "description": "RITA's Business Intelligence Engine - Automated market research for Asobo Creations & Peptide Business",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/main.js",
+    "daily": "node src/main.js --daily",
+    "test": "node src/main.js --test",
+    "setup": "node src/setup.js"
+  },
+  "keywords": [
+    "business-intelligence",
+    "automation",
+    "etsy",
+    "pinterest",
+    "market-research",
+    "competitor-analysis"
+  ],
+  "author": "Earth & RITA 🦋",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.3.0",
+    "node-cron": "^3.0.3",
+    "simple-git": "^3.20.0",
+    "fs-extra": "^11.1.0"
+  }
+}

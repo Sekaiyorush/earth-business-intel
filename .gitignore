@@ -1,0 +1,15 @@
+# Ignore
+node_modules/
+logs/
+*.log
+.env
+.DS_Store
+
+# But keep reports folder structure
+!reports/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
