@@ -124,16 +124,30 @@ Pinterest shows growing interest in steampunk animal themes.
 **Suggested Action:** Create 5-10 steampunk animal coloring pages
 ```
 
-## 🔄 Automation (Cron Job)
+## 🔄 Automation (Cron Job) - ACTIVE!
 
-Run daily at 6 AM UTC:
+✅ **Daily automation is already set up!** Every day at 6:00 AM UTC, RITA runs automatically and publishes reports to your GitHub.
+
+**View Reports Online:**
+- 📊 Reports: https://github.com/Sekaiyorush/earth-business-intel/tree/main/reports
+- 🌐 Repo: https://github.com/Sekaiyorush/earth-business-intel
+
+### Manual Run
+If you want to run it manually:
+
+```bash
+cd /root/.openclaw/workspace/earth-intel-bot
+npm run daily
+```
+
+### Modify Schedule
 
 ```bash
 # Edit crontab
 crontab -e
 
-# Add this line:
-0 6 * * * cd /root/.openclaw/workspace/earth-intel-bot && npm run daily >> logs/cron.log 2>&1
+# Current schedule (runs daily at 6 AM UTC):
+0 6 * * * /root/.openclaw/workspace/earth-intel-bot/run-daily.sh
 ```
 
 ## 🛠️ Commands
@@ -144,6 +158,21 @@ crontab -e
 | `npm run daily` | Production mode (publishes to GitHub) |
 | `npm run test` | Test mode (local only, no publishing) |
 | `npm run setup` | First-time configuration |
+
+## 💻 VPS Access
+
+Since you're running on a VPS, access your reports from anywhere:
+
+**GitHub Web:** https://github.com/Sekaiyorush/earth-business-intel  
+**Local Files:** `/root/.openclaw/workspace/earth-intel-bot/reports/`  
+**Cron Logs:** `/root/.openclaw/workspace/earth-intel-bot/logs/`
+
+### View Latest Report via SSH
+
+```bash
+# SSH into your VPS, then:
+cat /root/.openclaw/workspace/earth-intel-bot/reports/report-$(date +%Y-%m-%d).md
+```
 
 ## 🎯 Customization Ideas
 
