@@ -95,9 +95,9 @@ export const config = {
 
   // 📤 GitHub Publishing
   github: {
-    enabled: process.env.GITHUB_ENABLED === 'true' || false,
+    enabled: process.env.GITHUB_ENABLED === 'true' || true,
     repo: process.env.GITHUB_REPO || 'earth-business-intel',
-    owner: process.env.GITHUB_OWNER || '',
+    owner: process.env.GITHUB_OWNER || 'Sekaiyorush',
     branch: 'main',
     reportsPath: 'reports/daily',
     commitMessage: (date) => `📊 Daily Intel Report - ${date}`
